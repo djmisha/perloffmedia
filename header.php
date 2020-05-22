@@ -36,11 +36,9 @@
 
     <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?> has-webp">
         <div class="header-top">
-
             <div class="header-logo">
                 <?php site_logo('logo.png') ?>
             </div>
-
             <div class="menu-trigger">
                 <div class="nav-hamburger">
                     <span></span>
@@ -48,123 +46,16 @@
                     <span></span>
                     <span></span>
                 </div>
-                <div class="menu-button-text">Menu</div>
             </div>
-
-            <!-- <div class="header-locations">
-
-                <?php if( have_rows('locations', 'option')): ?>
-
-                <ul class="header-locations">
-
-                    <?php while( have_rows('locations', 'option')): the_row();
-						$locationName = get_sub_field('locationName');
-						$tag = get_sub_field('location_tag');
-						$street = get_sub_field('street');
-						$suite = get_sub_field('suite');
-						$city = get_sub_field('city');
-						$state = get_sub_field('state');
-						$zip = get_sub_field('zip');
-			    		$phone = get_sub_field('phone');
-						$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
-						$map = get_sub_field('map');
-						$gmb = get_sub_field('gmb');
-						$applink = Get_bloginfo('url') .'/contact-us/';
-					?>
-                    <li>
-                        <div>
-                            <?php
-								// phone
-								if($phone) echo '<div class="phone">
-								<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
-
-								// Tag
-								if($tag) echo '<div class="tag"><a href="' . $applink . '">Appointments</a></div>';
-
-								// Directions wrap open
-								if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
-
-									// locationName
-									if($locationName) echo '<div class="name">' . $locationName . '</div>';
-
-									// Address
-									if( $street ) {
-										echo '<div class="street">' . $street;
-										if ($suite) echo ', ' . $suite. ' ' . $city . ', ' . $state . ' ' . $zip;
-										echo '</div>'; // Street Address
-									}
-
-								if($gmb) echo '</a></div>';
-								// Directions wrap close/end
-								?>
-                        </div>
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
-                <?php endif; ?>
-            </div> -->
-            <?php // HEADER LOCATIONS END  ?>
         </div>
-
-        <div class="nav-bar">
-            <div class="nav-wrap">
-
-                <div class="menu-buttons">
-
-
-
-                    <!-- <div class="menu-contact">
-
-                        <div class="menu-phone">
-                            <?php
-								$phone_number = get_field('phone', 'options');
-								$tel_number = str_replace(array('.', ',', '-', '(', ')'), '' , $phone_number);
-							?>
-
-                            <a href="tel:1<?php echo $tel_number; ?>" data-label="Header - Phone number"
-                                class="track-outbound">
-                                <div class="touch-button-icon"><?php echo inline_svg('icon-phone'); ?></div>
-                                <span class="touch-button-text">Contact Us</span>
-                            </a>
-
-                        </div>
-
-                        <div class="menu-location">
-
-                            <?php if(have_rows('locations', 'option')): ?>
-                            <?php while(have_rows('locations', 'option')): the_row(); 
-									$applink = Get_bloginfo('url') .'/contac-us/';
-
-
-									?>
-
-                            <a href="<?php echo $applink; ?>">
-                                <div class="touch-button-icon"><?php echo inline_svg('icon-map'); ?></div>
-                                <span class="touch-button-text">Location</span>
-                            </a>
-
-                            <?php endwhile; ?>
-                            <?php endif; ?>
-
-                        </div>
-
-                    </div> -->
-
-                </div>
-
-                <nav>
-                    <?php wp_nav_menu( array(
-						'menu' 		=> 'Main',
-						'container_class' => 'menu-wrap',
-						'menu_id'	=> 'menu-main',
-						'menu_class' => 'main-menu',
-					)); ?>
-                </nav>
-
-            </div>
-
-        </div>
-
+        <nav>
+            <?php wp_nav_menu( array(
+                'menu' 		=> 'Main',
+                'container_class' => 'menu-wrap',
+                'menu_id'	=> 'menu-main',
+                'menu_class' => 'main-menu',
+        )); ?>
+        </nav>
     </header>
 
 
@@ -184,10 +75,6 @@
                 <?the_title();?>
             </h1>
             <?php endif; ?>
-
-
-
-
 
             <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>
         </section>

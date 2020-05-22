@@ -42,6 +42,9 @@ $navBar: 60px;
             position: relative;
             list-style-type: none;
             text-align: right;
+            @include media($tablet) {
+                padding: 0 200px;
+            }
             &:before {
                 display: none;
             }
@@ -62,6 +65,9 @@ $navBar: 60px;
             display: block;
             color: $lightColor; //Set color for menu items
             text-transform: uppercase;
+            @include media($tablet) {
+                @include font(55px, 1em); //Set font size for menu items
+            }
             &:hover,
             &:active,
             &:focus {
@@ -146,16 +152,20 @@ $navBar: 60px;
     display: flex;
     align-items: center;
     height: 50px;
+    // position: absolute;
+    // right: 40px;
+    // top: 40px;
 }
 
 /* Hamburger Menu */
 
 .nav-hamburger {
-    width: 30px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
+    // border: 1px solid pink;
     position: relative;
     transform: rotate(0deg);
-    // transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     cursor: pointer;
 
     span {
@@ -168,34 +178,37 @@ $navBar: 60px;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        // transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         &:nth-child(1) {
-            top: 2px;
+            top: 4px;
         }
         &:nth-child(3) {
+            top: 6px;
         }
         &:nth-child(2),
         &:nth-child(3) {
-            display: none;
-            top: 18px;
+            // display: none;
+            top: 14px;
         }
         &:nth-child(4) {
-            top: 12px;
-            width: 80%;
+            top: 24px;
+            // width: 80%;
         }
     }
     // 	open
     &.open {
-        position: relative;
-        right: 10px;
-        top: 10px;
-        z-index: 9999;
-        width: 30px;
-        height: 30px;
-        background: $lightColor;
+        // position: relative;
+        // right: 10px;
+        // top: 10px;
+        z-index: 99999;
+        // width: 30px;
+        // height: 30px;
+        background: transparent;
 
         // display:
         span {
+            background: $lightColor;
+
             &:nth-child(1) {
                 top: 9px;
                 width: 0%;
@@ -218,15 +231,15 @@ $navBar: 60px;
     }
 }
 
-.menu-button-text {
-    color: $primaryColor;
-    text-transform: uppercase;
-    margin-left: 10px;
-    font-size: 14px;
-    &.open {
-        // margin-left: 40px;
-    }
-}
+// .menu-button-text {
+//     color: $primaryColor;
+//     text-transform: uppercase;
+//     margin-left: 10px;
+//     font-size: 14px;
+//     &.open {
+//         // margin-left: 40px;
+//     }
+// }
 /* Nav Expander (Plus button) */
 
 .nav-expander {
@@ -274,8 +287,8 @@ $navBar: 60px;
 
 // This site specific
 
-.touch-menu {
-    .social-segment {
-        display: none;
-    }
-}
+// .touch-menu {
+//     .social-segment {
+//         display: none;
+//     }
+// }
