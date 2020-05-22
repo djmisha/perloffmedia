@@ -53,14 +53,17 @@
 }
 
 .menu-buttons {
-    width: 100%;
-    display: flex;
+    position: relative;
+    border: 1px solid pink;
+    width: 120px;
+
+    display: none;
     justify-content: space-between;
     @include media($desktop, notdevice) {
-        display: none;
+        // display: none;
     }
     a {
-        color: $lightColor;
+        color: $primaryColor;
         text-decoration: none;
     }
     span {
@@ -158,6 +161,7 @@
         margin: 0 !important;
         padding: 0;
     }
+    img,
     svg {
         width: 100%;
         max-width: 382px;

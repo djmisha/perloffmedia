@@ -1,16 +1,14 @@
-
-header,
+// header,
 footer,
-.lower-footer, 
+.lower-footer,
 .footer-locations-wrapper,
 .home-welcome,
 .home-whychoose,
 .home-surgery,
 .home-doctors,
 .home-with-image,
-.home-testis
-{
-	// display: none !important;
+.home-testis {
+    display: none !important;
 }
 
 /* ------------------------
@@ -19,81 +17,75 @@ footer,
 
 // Colors
 
-$blue : #126abf;
-$lightBlue : #F8FBFD;
-$lightAquaAlt : #95e1e8;
-$mediumBlue : #105CA5;
-$darkBlue : #105598;
+$blue: #126abf;
+$lightBlue: #f8fbfd;
+$lightAquaAlt: #95e1e8;
+$mediumBlue: #105ca5;
+$darkBlue: #105598;
 
-$blueGreen : #368c94;
+$blueGreen: #368c94;
 
-$blueGray : #f1fbff;
+$blueGray: #f1fbff;
 
-$lightGray : #f2f2f2;
-$darkGray : #858688;
-$alsoDarkGrey :#696969;
-$textGray : #575757;
+$lightGray: #f2f2f2;
+$darkGray: #858688;
+$alsoDarkGrey: #696969;
+$textGray: #575757;
 
-
-		
 // $shadow : box-shadow: 0px 10px 15px rgba(#000, .16);
-
 
 // ---------------
 
-$primaryColor : $blue; // link color, buttons, nav, footer, etc
-$primaryAlt : $mediumBlue; //link hover
-$primaryHighlight : $lightBlue;
-$primaryHighlightAlt : $lightAquaAlt;
-$primaryAccent : $alsoDarkGrey;
+$primaryColor: $blue; // link color, buttons, nav, footer, etc
+$primaryAlt: $mediumBlue; //link hover
+$primaryHighlight: $lightBlue;
+$primaryHighlightAlt: $lightAquaAlt;
+$primaryAccent: $alsoDarkGrey;
 
-$secondaryColor : $darkGray;
-$secondaryAlt : $textGray;
+$secondaryColor: $darkGray;
+$secondaryAlt: $textGray;
 
-$tertiaryColor : $lightGray;
-$tertiaryAlt : $textGray;
+$tertiaryColor: $lightGray;
+$tertiaryAlt: $textGray;
 
-
-
-$lightColor : #ffffff;
-$darkColor : #000000;
-$lightAlt : $lightGray;
-$darkAlt : $darkGray;
+$lightColor: #ffffff;
+$darkColor: #000000;
+$lightAlt: $lightGray;
+$darkAlt: $darkGray;
 
 // Font Family
 
-$primaryFont :  montserrat, sans-serif;
-$secondaryFont :  gill-sans-nova, sans-serif;
-$highlightFont : montserrat, sans-serif;
-
+$primaryFont: montserrat, sans-serif;
+$secondaryFont: gill-sans-nova, sans-serif;
+$highlightFont: montserrat, sans-serif;
 
 // Font Weight
 
-$thin : 100;
-$light : 300;
-$normal : 400;
-$regular : 400;
-$medium : 500;
-$semiBold : 600;
-$bold : 700;
-$extraBold : 800;
-$heavy : 900;
+$thin: 100;
+$light: 300;
+$normal: 400;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
 
 // Sizing
 
 @function updateSize($size) {
-  $newSize : $size + 80px;
-  @return $newSize;
+    $newSize: $size + 80px;
+    @return $newSize;
 }
 
-$tablet : 768px;
-$ogDesktop : 980px;
-$ogFull : 1380px;
+$tablet: 768px;
+$ogDesktop: 980px;
+$ogFull: 1380px;
 
-$desktop : updateSize($ogDesktop);
-$full : updateSize($ogFull);
+$desktop: updateSize($ogDesktop);
+$full: updateSize($ogFull);
 
-$sidebar : 300px;
+$sidebar: 300px;
 
 // Increasing color
 
@@ -101,5 +93,5 @@ $step: 1;
 
 // Defaults
 
-$defaultfont : $primaryFont;
-$defaultcolor : $textGray;
+$defaultfont: $primaryFont;
+$defaultcolor: $textGray;

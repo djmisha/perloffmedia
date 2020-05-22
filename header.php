@@ -38,10 +38,20 @@
         <div class="header-top">
 
             <div class="header-logo">
-                <?php site_logo('logo.svg') ?>
+                <?php site_logo('logo.png') ?>
             </div>
 
-            <div class="header-locations">
+            <div class="menu-trigger">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-button-text">Menu</div>
+            </div>
+
+            <!-- <div class="header-locations">
 
                 <?php if( have_rows('locations', 'option')): ?>
 
@@ -92,7 +102,7 @@
                     <?php endwhile; ?>
                 </ul>
                 <?php endif; ?>
-            </div>
+            </div> -->
             <?php // HEADER LOCATIONS END  ?>
         </div>
 
@@ -101,17 +111,9 @@
 
                 <div class="menu-buttons">
 
-                    <div class="menu-trigger">
-                        <div class="nav-hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="menu-button-text">Menu</div>
-                    </div>
 
-                    <div class="menu-contact">
+
+                    <!-- <div class="menu-contact">
 
                         <div class="menu-phone">
                             <?php
@@ -146,7 +148,7 @@
 
                         </div>
 
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -174,9 +176,9 @@
             <?php if (is_search()): ?>
             <div class="headline">Search Results</div>
             <?php elseif (is_home() or is_archive()): ?>
-            <h1>Vision News & Blog</h1>
+            <h1>Blog</h1>
             <?php elseif (is_single()): ?>
-            <div class="headline">Vision News & Blog</div>
+            <div class="headline">Blog</div>
             <?php else: ?>
             <h1>
                 <?the_title();?>
